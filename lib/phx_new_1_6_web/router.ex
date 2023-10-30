@@ -18,6 +18,7 @@ defmodule PhxNew16Web.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/persons", PersonController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
